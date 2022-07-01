@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoアプリTop画面</title>
+</head>
+<body>
+
+    ログイン画面です．登録したmidを入れます．
+    <form role="form" th:action="@{/login}" th:object="${MidForm}" method="get">
+        <table>
+            <tr>
+                <td><input type="text" required th:field="*{mid}" /></td>
+            </tr>
+        </table>
+        <p><input type="submit" value="ログインする" /></p>
+    </form>
+</body>
+</html>
